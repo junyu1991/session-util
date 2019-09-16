@@ -37,6 +37,13 @@
             <version>1.18.8</version>
         </dependency>
 
+        <!-- Spring boot starter, just for test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.1.7.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
