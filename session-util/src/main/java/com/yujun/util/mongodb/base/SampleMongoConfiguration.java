@@ -39,6 +39,20 @@ public class SampleMongoConfiguration extends AbstractMongoConfiguration {
         return new SimpleMongoDbFactory(mongoClient(), DATABASE);
     }
 
+    /**
+     * 使用默认DefaultMongoTypeMapper的MongoTemplate
+     * @author: yujun
+     * @date: 2019/9/18
+     * @description: TODO
+     * @param
+     * @return: {@link MongoTemplate}
+     * @exception:
+    */
+    @Bean
+    public MongoTemplate defaultMongoTemplate() {
+        return new MongoTemplate(mongoClient(), getDatabaseName());
+    }
+
     /** 
      * 使用定制的DefaultMongoTypeMapper，使的插入mongodb中的数据没有_class字段，默认会插入_class字段
      * @author: yujun
